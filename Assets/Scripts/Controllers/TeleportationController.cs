@@ -13,13 +13,21 @@ public class TeleportationController : MonoBehaviour
     private InputHelpers.Button teleportActivationButton;
 
     [SerializeField]
+    private GameObject teleportSelector;
+
+    [SerializeField]
     private float activationThreshold = 0.1f;
 
     void Update()
     {
         if(leftTeleportRay || rightTeleportRay) {
-            leftTeleportRay.gameObject.SetActive(CheckIfActivated(leftTeleportRay, rightTeleportRay));
-            rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay, leftTeleportRay));
+            bool leftOn = CheckIfActivated(leftTeleportRay, rightTeleportRay);
+            bool rightOn = CheckIfActivated(rightTeleportRay, leftTeleportRay);
+            leftTeleportRay.gameObject.SetActive(leftOn);
+            rightTeleportRay.gameObject.SetActive(rightOn);
+            if(!leftOn && !rightOn) {
+                teleportSelector.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -31,6 +39,7 @@ public class TeleportationController : MonoBehaviour
         } else {
             return isActivated;
         }
-        return isActivated;
+
+        //return isActivated;
     }
 }
