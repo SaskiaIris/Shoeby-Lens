@@ -567,6 +567,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1e2fb0435fe16d344924d195015e05a7, type: 3}
   m_PrefabInstance: {fileID: 7775161}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7978072 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2370930726588367221, guid: f8b413be30983b342827614fce0112b6, type: 3}
+  m_PrefabInstance: {fileID: 2114589115}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &44219116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5380,6 +5391,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 428836, guid: 973635a74c373f64786c1a722a86f646, type: 3}
   m_PrefabInstance: {fileID: 360283500}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &378575139 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4304881633707004040, guid: 7cde77a09db629e458f6e256a6211389, type: 3}
+  m_PrefabInstance: {fileID: 1024850264}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &384125876
 GameObject:
   m_ObjectHideFlags: 0
@@ -5469,9 +5491,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284c85fd6afffc54b8d605cad6723d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftTeleportRay: {fileID: 0}
-  rightTeleportRay: {fileID: 0}
-  teleportActivationButton: 0
+  leftTeleportRay: {fileID: 7978072}
+  rightTeleportRay: {fileID: 378575139}
+  teleportActivationButton: 2
   activationThreshold: 0.1
 --- !u!114 &384125881
 MonoBehaviour:
@@ -17978,6 +18000,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 443510, guid: 2a47d0bd64cd05d488d7ec1a627d4e9d, type: 3}
   m_PrefabInstance: {fileID: 1390444922}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1443795001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129704, guid: beba9d81b4a57ba4ba6efd32c5f3e818, type: 3}
+  m_PrefabInstance: {fileID: 45608129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1443795002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443795001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 1524014950}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_TeleportTrigger: 0
 --- !u!1001 &1477103890
 PrefabInstance:
   m_ObjectHideFlags: 0
