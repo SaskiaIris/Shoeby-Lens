@@ -2787,6 +2787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bob the Great Shirt
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77159a58fafee1449b9bc8fe9563babe, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77159a58fafee1449b9bc8fe9563babe, type: 3}
 --- !u!1 &210400761 stripped
@@ -12672,6 +12676,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 77159a58fafee1449b9bc8fe9563babe, type: 3}
       propertyPath: m_Name
       value: Bob the Great Shirt (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77159a58fafee1449b9bc8fe9563babe, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77159a58fafee1449b9bc8fe9563babe, type: 3}
@@ -27212,6 +27220,10 @@ PrefabInstance:
     - target: {fileID: 2387574659307630334, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
       propertyPath: m_Name
       value: VR Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387574659307630334, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2387574659979652980, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
       propertyPath: m_InteractionManager
