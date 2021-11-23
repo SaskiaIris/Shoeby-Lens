@@ -617,8 +617,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 2387574659599621692}
     m_Modifications:
     - target: {fileID: 4304881633707004041, guid: 7cde77a09db629e458f6e256a6211389, type: 3}
+      propertyPath: m_UseForceGrab
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304881633707004041, guid: 7cde77a09db629e458f6e256a6211389, type: 3}
       propertyPath: m_InteractionManager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304881633707004041, guid: 7cde77a09db629e458f6e256a6211389, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 4304881633707004041, guid: 7cde77a09db629e458f6e256a6211389, type: 3}
       propertyPath: m_InteractionLayerMask.m_Bits
@@ -837,8 +845,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2370930726588367210, guid: f8b413be30983b342827614fce0112b6, type: 3}
+      propertyPath: m_UseForceGrab
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370930726588367210, guid: f8b413be30983b342827614fce0112b6, type: 3}
       propertyPath: m_InteractionManager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370930726588367210, guid: f8b413be30983b342827614fce0112b6, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 2370930726588367210, guid: f8b413be30983b342827614fce0112b6, type: 3}
       propertyPath: m_InteractionLayerMask.m_Bits
