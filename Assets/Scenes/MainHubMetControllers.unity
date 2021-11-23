@@ -26882,37 +26882,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 127616397549630875, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
-      propertyPath: m_UseForceGrab
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 127616397549630875, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1524014950}
-    - target: {fileID: 127616397549630875, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
-      propertyPath: m_RaycastMask.m_Bits
-      value: 119
-      objectReference: {fileID: 0}
-    - target: {fileID: 127616397549630875, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
-      propertyPath: m_InteractionLayerMask.m_Bits
-      value: 119
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917510385284697243, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
-      propertyPath: m_UseForceGrab
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917510385284697243, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1524014950}
     - target: {fileID: 1917510385284697243, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
-      propertyPath: m_RaycastMask.m_Bits
-      value: 119
-      objectReference: {fileID: 0}
-    - target: {fileID: 1917510385284697243, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
-      propertyPath: m_InteractionLayerMask.m_Bits
-      value: 119
-      objectReference: {fileID: 0}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1524014950}
     - target: {fileID: 2387574659307630332, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
       propertyPath: m_RootOrder
       value: 12
