@@ -18,13 +18,16 @@ public class TeleportationController : MonoBehaviour
     [SerializeField]
     private float activationThreshold = 0.1f;
 
+    public bool EnableLeftTeleport { get; set; } = true;
+    public bool EnableRightTeleport { get; set; } = true;
+
     void Update()
     {
         if(leftTeleportRay || rightTeleportRay) {
             bool leftOn = CheckIfActivated(leftTeleportRay, rightTeleportRay);
             bool rightOn = CheckIfActivated(rightTeleportRay, leftTeleportRay);
-            leftTeleportRay.gameObject.SetActive(leftOn);
-            rightTeleportRay.gameObject.SetActive(rightOn);
+            leftTeleportRay.gameObject.SetActive(EnableLeftTeleport && leftOn);
+            rightTeleportRay.gameObject.SetActive(EnableRightTeleport && rightOn);
             if(!leftOn && !rightOn) {
                 teleportSelector.gameObject.SetActive(false);
             }
