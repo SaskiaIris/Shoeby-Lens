@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2387574659307630323}
   - component: {fileID: 2387574659307630322}
   - component: {fileID: 2387574659307630333}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VR Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,6 +624,14 @@ PrefabInstance:
       propertyPath: m_Reticle
       value: 
       objectReference: {fileID: 7378839225407078045}
+    - target: {fileID: 4304881633707004047, guid: 7cde77a09db629e458f6e256a6211389, type: 3}
+      propertyPath: m_ValidColorGradient.key0.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304881633707004047, guid: 7cde77a09db629e458f6e256a6211389, type: 3}
+      propertyPath: m_InvalidColorGradient.key0.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cde77a09db629e458f6e256a6211389, type: 3}
 --- !u!4 &1917510385284697246 stripped
@@ -724,6 +732,14 @@ PrefabInstance:
       propertyPath: m_Reticle
       value: 
       objectReference: {fileID: 7378839225407078045}
+    - target: {fileID: 2370930726588367208, guid: f8b413be30983b342827614fce0112b6, type: 3}
+      propertyPath: m_ValidColorGradient.key0.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370930726588367208, guid: f8b413be30983b342827614fce0112b6, type: 3}
+      propertyPath: m_InvalidColorGradient.key0.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
     - target: {fileID: 2370930726588367209, guid: f8b413be30983b342827614fce0112b6, type: 3}
       propertyPath: m_RootOrder
       value: 2
