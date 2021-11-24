@@ -27262,6 +27262,10 @@ PrefabInstance:
       propertyPath: m_OcclusionCulling
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2387574659979652977, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
+      propertyPath: m_Name
+      value: LeftHandController
+      objectReference: {fileID: 0}
     - target: {fileID: 2387574659979652980, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -27270,5 +27274,9 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1524014950}
+    - target: {fileID: 2387574660596495119, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}
+      propertyPath: m_Name
+      value: RightHandController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 580ccd0b90ccaaa4188875b3205a6ea2, type: 3}

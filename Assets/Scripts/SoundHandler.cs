@@ -11,7 +11,7 @@ public class SoundHandler : MonoBehaviour
  
     public void OnTriggerEnter(Collider target)
     {
-        if (target.transform.gameObject.name == "LeftHand Controller" || target.transform.gameObject.name == "RightHand Controller")
+        if (target.transform.gameObject.name == "LeftHandController" || target.transform.gameObject.name == "RightHandController")
         {
             if (!triggered)
             {
