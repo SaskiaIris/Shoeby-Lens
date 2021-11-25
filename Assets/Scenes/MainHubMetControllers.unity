@@ -6491,23 +6491,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 461738, guid: cf1e291b54d6c80499a660fa10ec0906, type: 3}
   m_PrefabInstance: {fileID: 500201414}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &500935891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4241a32f6692b5145bae4f866390842f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _attachedGameObject: {fileID: 0}
-  _isActive: 0
-  Name: Shirt
-  CharacterFolderName: BobTheGreat
-  WearableType: 2
 --- !u!1001 &509465715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16798,6 +16781,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shirt boom 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1574939238905819884, guid: e965574dae398fb43b02a61bb11762a6, type: 3}
+      propertyPath: m_TagString
+      value: Shirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808801310301163449, guid: e965574dae398fb43b02a61bb11762a6, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2202434250655819862, guid: e965574dae398fb43b02a61bb11762a6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -24652,6 +24643,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shirt boom 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1574939238905819884, guid: e965574dae398fb43b02a61bb11762a6, type: 3}
+      propertyPath: m_TagString
+      value: Shirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808801310301163449, guid: e965574dae398fb43b02a61bb11762a6, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2202434250655819862, guid: e965574dae398fb43b02a61bb11762a6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -26686,6 +26685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shirt 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2140794161400372180, guid: 591b2ccbc3f38b64ea9016239630f585, type: 3}
+      propertyPath: m_TagString
+      value: Shirt
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 591b2ccbc3f38b64ea9016239630f585, type: 3}
 --- !u!1001 &767949909402380607
@@ -26743,16 +26746,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4899351607213782948, guid: ef02b6112b2c4394980d9b34a52b4260, type: 3}
-      propertyPath: _wearables.Array.data[0]
-      value: 
-      objectReference: {fileID: 500935891}
-    - target: {fileID: 8487363403183116780, guid: ef02b6112b2c4394980d9b34a52b4260, type: 3}
-      propertyPath: m_IsTrigger
+    - target: {fileID: 1711421226458602050, guid: ef02b6112b2c4394980d9b34a52b4260, type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4899351607213782948, guid: ef02b6112b2c4394980d9b34a52b4260, type: 3}
+    - target: {fileID: 1711421226458602050, guid: ef02b6112b2c4394980d9b34a52b4260, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945934750039271191, guid: ef02b6112b2c4394980d9b34a52b4260, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912674824342206600, guid: ef02b6112b2c4394980d9b34a52b4260, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912674824342206600, guid: ef02b6112b2c4394980d9b34a52b4260, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef02b6112b2c4394980d9b34a52b4260, type: 3}
 --- !u!1001 &1808801310494521925
 PrefabInstance:
@@ -26763,6 +26777,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1574939238905819884, guid: e965574dae398fb43b02a61bb11762a6, type: 3}
       propertyPath: m_Name
+      value: Shirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574939238905819884, guid: e965574dae398fb43b02a61bb11762a6, type: 3}
+      propertyPath: m_TagString
       value: Shirt
       objectReference: {fileID: 0}
     - target: {fileID: 1808801310301163455, guid: e965574dae398fb43b02a61bb11762a6, type: 3}
