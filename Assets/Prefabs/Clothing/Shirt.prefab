@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1808801310301163454}
   - component: {fileID: 1808801310301163455}
   m_Layer: 3
-  m_Name: Bob the Great Shirt
+  m_Name: Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
