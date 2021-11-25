@@ -4,49 +4,44 @@ using UnityEngine;
 public class AvatarDressing : MonoBehaviour
 {
     [SerializeField]
-    private string clothingLayerName = "Grab";
-    [SerializeField]
     private int clothingLayerNumber = 3;
 
     [SerializeField]
-    private string hairTagName = "Hair";
-    [SerializeField]
-    private List<GameObject> hairs = null;
-
-    [SerializeField]
-    private string shirtTagName = "Shirt";
-    [SerializeField]
-    private List<GameObject> shirts = null;
-
-    [SerializeField]
-    private string pantsTagName = "Pants";
-    [SerializeField]
-    private List<GameObject> pants = null;
-
-    [SerializeField]
-    private string shoesTagName = "Shoes";
-    [SerializeField]
-    private List<GameObject> shoes = null;
+    private List<ClothingType> clothes = null;
 
     //Detect collisions between the GameObjects with Colliders attached
     void OnCollisionEnter(Collision collision) {
-        /*//Check for a match with the specified name on any GameObject that collides with your GameObject
-        if(collision.gameObject.name == "MyGameObjectName") {
-            //If the GameObject's name matches the one you suggest, output this message in the console
-            Debug.Log("Do something here");
-        }*/
-
         if(collision.gameObject.layer == clothingLayerNumber) {
-            //Check for a match with the specific tag on any GameObject that collides with your GameObject
-            if(collision.gameObject.tag == shirtTagName) {
-                //If the GameObject has the same tag as specified, output this message in the console
-                Debug.Log("Dit is een shirt");
+			for(int i = 0; i < clothes.Count; i++) {
+                if(collision.gameObject.tag == clothes[i].tagName) {
+                    ChangeClothing(clothes[i].gameObjectPieces, collision.gameObject, clothes[i].fullOutfit);
+                }
+			}
+        }
+    }
 
-                for(int i = 0; i < shirts.Count; i++) {
-                    if(shirts[i].name == collision.gameObject.name) {
-                        shirts[i].SetActive(true);
-                    } else {
-                        shirts[i].SetActive(false);
+    public void ChangeClothing(List<GameObject> clothingType, GameObject thrownClothing, bool isFullOutfit) {
+        for(int i = 0; i < clothingType.Count; i++) {
+            if(clothingType[i].name == thrownClothing.name) {
+                clothingType[i].SetActive(true);
+            } else {
+                clothingType[i].SetActive(false);
+            }
+
+            if(isFullOutfit) {
+                for(int k = 0; k < clothes.Count; k++) {
+                    if(!clothes[k].fullOutfit) {
+                        for(int j = 0; j < clothes[k].gameObjectPieces.Count; j++) {
+                            clothes[k].gameObjectPieces[j].SetActive(false);
+                        }
+                    }
+                }
+            } else {
+                for(int l = 0; l < clothes.Count; l++) {
+                    if(clothes[l].fullOutfit) {
+                        for(int m = 0; m < clothes[l].gameObjectPieces.Count; m++) {
+                            clothes[l].gameObjectPieces[m].SetActive(false);
+                        }
                     }
                 }
             }
