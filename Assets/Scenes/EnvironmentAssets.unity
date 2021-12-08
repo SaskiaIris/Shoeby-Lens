@@ -2868,6 +2868,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5102264946577298361, guid: 441117e234859344d8104f5a90c7d644, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a257aa22e52777a45ada2b3d1ee2ace6, type: 2}
     - target: {fileID: 5102264946577298363, guid: 441117e234859344d8104f5a90c7d644, type: 3}
       propertyPath: m_Name
       value: Sakura petals
