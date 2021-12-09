@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 635107359746548954}
   - component: {fileID: 527181548402951975}
   - component: {fileID: 8889917520854399675}
+  - component: {fileID: 7155578694832820309}
   m_Layer: 0
   m_Name: PushLeft
   m_TagString: Untagged
@@ -401,6 +402,26 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7155578694832820309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5825920456354809985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4817fa4ee9477104a96e59abd0b58cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.1
+  deadZone: 0.025
+  onPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onReleased:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5974348312327486417
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +741,7 @@ GameObject:
   - component: {fileID: 1400441917282991609}
   - component: {fileID: 8328824544016887999}
   - component: {fileID: 2295907535972631114}
+  - component: {fileID: 4965519544397098329}
   m_Layer: 0
   m_Name: PushRight
   m_TagString: Untagged
@@ -783,7 +805,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 1.8999994, z: 0}
+  m_ConnectedAnchor: {x: 0.00000022351742, y: 1.9000024, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -867,6 +889,26 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4965519544397098329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456207287085544864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4817fa4ee9477104a96e59abd0b58cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.1
+  deadZone: 0.025
+  onPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onReleased:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8896719809901005065
 GameObject:
   m_ObjectHideFlags: 0
