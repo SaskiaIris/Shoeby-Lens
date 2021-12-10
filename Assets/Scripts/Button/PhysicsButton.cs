@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class PhysicsButton : MonoBehaviour
 {
     [SerializeField]
-    private float threshold = .1f;
+    private float threshold = 0.1f;
     [SerializeField]
     private float deadZone = 0.025f;
 

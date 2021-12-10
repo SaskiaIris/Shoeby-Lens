@@ -29,7 +29,7 @@ public class EnviSwitch : MonoBehaviour
         if (!used)
         {
             bushes.SetActive(true);
-            descent = StartCoroutine(AnimateDescent(bushes.transform.position, onPosition));
+            descent = StartCoroutine(AnimateDescent(offPosition, onPosition));
             used = true;
         }
     }
