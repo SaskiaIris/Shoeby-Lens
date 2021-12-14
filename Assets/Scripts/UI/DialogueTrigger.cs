@@ -7,8 +7,9 @@ public class DialogueTrigger : MonoBehaviour
 
     public Dialogue dialogue;
 
-    public void TriggerDialogue()
+    void Start()
     {
         FindObjectOfType<DialogueManager>().StartBeeText(dialogue);
     }
+
 }

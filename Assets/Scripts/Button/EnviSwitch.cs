@@ -4,44 +4,72 @@ using UnityEngine;
 
 public class EnviSwitch : MonoBehaviour
 {
-    public Vector3 descentSpeed = new Vector3(1, 5, 1);
-    public float descentDuration = 0.25f; // seconds
-    private Vector3 offPosition;
-    public Vector3 onPosition = new Vector3(1, 3, 1);
+    public Vector3 speed = new Vector3(1, 5, 1);
+    public float duration = 0.25f; // seconds
+    private Vector3 bushesOffPosition;
+    private Vector3 catwalkOffPosition;
+    public Vector3 bushesOnPosition = new Vector3(1, 3, 1);
+    public Vector3 catwalkOnPosition = new Vector3(1, -3, 1);
+    private Coroutine ascent;
     private Coroutine descent;
     [SerializeField]
-    private GameObject bushes;
+    private GameObject bushes, catwalk;
 
-    private bool used = false;
+    [SerializeField]
+    private int clicked = 0;
+
+    [SerializeField]
+    private int amountOfClicksBush = 2;
+
 
     void Start()
     {
-        offPosition = bushes.transform.position;
-        //onPosition = Vector3.Scale(descentSpeed, offPosition);
+        bushesOffPosition = bushes.transform.position;
+        catwalkOffPosition = catwalk.transform.position;
+        catwalk = null;
     }
 
     public void Switch()
     {
-        if (descent != null)
+        if (ascent != null)
         {
-            StopCoroutine(descent);
+            StopCoroutine(ascent);
         }
-        if (!used)
+        //if (descent != null)
+        //{
+        //    StopCoroutine(descent);
+        //}
+
+        if (clicked == amountOfClicksBush)
         {
             bushes.SetActive(true);
-            descent = StartCoroutine(AnimateDescent(offPosition, onPosition));
-            used = true;
+            ascent = StartCoroutine(AnimateAscent(bushesOffPosition, bushesOnPosition));
+            //descent = StartCoroutine(AnimateDescent(catwalkOffPosition, catwalkOnPosition));
         }
+
+        clicked++;
     }
 
-    private IEnumerator AnimateDescent(Vector3 fromPosition, Vector3 toPosition)
+    private IEnumerator AnimateAscent(Vector3 bushFromPosition, Vector3 bushToPosition)
     {
         float t = 0;
-        while (t < descentDuration)
+        while (t < duration)
         {
-            transform.position = Vector3.Lerp(fromPosition, toPosition, t / descentDuration);
+            bushes.transform.position = Vector3.Lerp(bushFromPosition, bushToPosition, t / duration);
             t += Time.deltaTime;
             yield return null;
         }
     }
+
+    //private IEnumerator AnimateDescent(Vector3 catwalkFromPos, Vector3 catwalkToPos)
+    //{
+    //    float t = 0;
+    //    while (t < duration)
+    //    {
+    //        catwalk.transform.position = Vector3.Lerp(catwalkFromPos, catwalkToPos, t / duration);
+    //        t += Time.deltaTime;
+    //        yield return null;
+    //    }
+    //    catwalk.SetActive(false);
+    //}
 }

@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        
     }
 
     public void StartBeeText (Dialogue dialogue)
@@ -44,9 +45,11 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+        
 
         string sentence = sentences.Dequeue();
         beeText.text = sentence;
+            
     }
 
     void EndDialogue()
