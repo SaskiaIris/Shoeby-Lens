@@ -3299,10 +3299,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Welkom in Shoeby-world. Ik ben Shoe-bee en dit is mijn paradijs.
+    - Welkom in Shoeby-world. Ik ben Shoe-bee en dit is mijn paradijs. Raak de knop
+      aan om verder te gaan!
     - Kijk om je heen. Dit is de runway! Hier zijn creaties te zien van voorgaande
       shoeby klanten.
     - Wie weet staat jouw creatie hier zometeen ook tussen.
+    - 'Maar voordat we beginnen, even een kleine introductie:'
+    - Knoppen uitleg
+    - "Genoeg ge\xEFnspireerd voor nu? Druk op de knop om je eigen avatar te maken!"
+    - Dit is jouw op maat gebaseerde avatar!
+    - 'Er mist nog een personal touch vind je niet? Personaliseer doormate van de
+      customization tools. '
 --- !u!1001 &1238232715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5553,12 +5560,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2338350778292994980, guid: c273627f9e9d58945a83bedc5b399c3d, type: 3}
+      propertyPath: speed.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338350778292994980, guid: c273627f9e9d58945a83bedc5b399c3d, type: 3}
+      propertyPath: duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338350778292994980, guid: c273627f9e9d58945a83bedc5b399c3d, type: 3}
       propertyPath: amountOfClicksBush
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338350778292994980, guid: c273627f9e9d58945a83bedc5b399c3d, type: 3}
+      propertyPath: bushesOnPosition.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338350778292994980, guid: c273627f9e9d58945a83bedc5b399c3d, type: 3}
+      propertyPath: bushesOnPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338350778292994980, guid: c273627f9e9d58945a83bedc5b399c3d, type: 3}
+      propertyPath: bushesOnPosition.z
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 2338350778292994983, guid: c273627f9e9d58945a83bedc5b399c3d, type: 3}
       propertyPath: m_Name
       value: Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338350778836964055, guid: c273627f9e9d58945a83bedc5b399c3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c273627f9e9d58945a83bedc5b399c3d, type: 3}

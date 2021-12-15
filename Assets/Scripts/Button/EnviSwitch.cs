@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class EnviSwitch : MonoBehaviour
 {
-    public Vector3 speed = new Vector3(1, 5, 1);
     public float duration = 0.25f; // seconds
     private Vector3 bushesOffPosition;
     private Vector3 catwalkOffPosition;
-    public Vector3 bushesOnPosition = new Vector3(1, 3, 1);
+    public Vector3 bushesOnPosition = new Vector3(0.55f, 0.11f, -0.18f);
     public Vector3 catwalkOnPosition = new Vector3(1, -3, 1);
     private Coroutine ascent;
     private Coroutine descent;
@@ -24,8 +23,8 @@ public class EnviSwitch : MonoBehaviour
 
     void Start()
     {
-        bushesOffPosition = bushes.transform.position;
-        catwalkOffPosition = catwalk.transform.position;
+        bushesOffPosition = bushes.transform.localPosition;
+        catwalkOffPosition = catwalk.transform.localPosition;
         catwalk = null;
     }
 
