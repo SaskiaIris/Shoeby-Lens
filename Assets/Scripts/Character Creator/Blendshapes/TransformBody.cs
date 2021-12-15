@@ -9,6 +9,8 @@ public class TransformBody : MonoBehaviour {
     [SerializeField]
     private float timeForScaling = 20f;
 
+    [SerializeField]
+    private List<Blendshape> blendshapes = null;
 
     private SkinnedMeshRenderer skinnedMeshRenderer;
     private Mesh skinnedMesh;

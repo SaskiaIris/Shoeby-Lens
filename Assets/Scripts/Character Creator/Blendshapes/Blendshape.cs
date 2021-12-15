@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class Blendshape : MonoBehaviour {
+public class Blendshape {
     public string shapeName;
     public int minIndex;
     public int maxIndex;
