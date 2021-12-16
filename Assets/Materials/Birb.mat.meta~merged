@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Materials/Birb.mat.meta
 guid: 73558519c9b785949a54e063d815c6f1
 =======
 guid: 3b1168aa26a9cc340a0e1d0980ed0384
 >>>>>>> Feature/Onboarding:Assets/Materials/BEE.mat.meta
+=======
+guid: 716c9c3ff0f40cc4d96b95b76ae4aead
+>>>>>>> Feature/Onboarding
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
