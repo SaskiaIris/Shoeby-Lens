@@ -7,25 +7,30 @@ public class EnviSwitch : MonoBehaviour
     public float duration = 0.25f; // seconds
     private Vector3 bushesOffPosition;
     private Vector3 catwalkOffPosition;
-    public Vector3 bushesOnPosition = new Vector3(0.55f, 0.11f, -0.18f);
+    private Vector3 bobOffPosition;
+    public Vector3 bushesOnPosition = new Vector3(0.55f, 0.2f, -0.18f);
     public Vector3 catwalkOnPosition = new Vector3(1, -3, 1);
+    public Vector3 bobOnPosition = new Vector3(0, 0, 0);
     private Coroutine ascent;
     private Coroutine descent;
     [SerializeField]
-    private GameObject bushes, catwalk;
+    private GameObject bushes, catwalk, bob;
 
     [SerializeField]
     private int clicked = 0;
 
     [SerializeField]
-    private int amountOfClicksBush = 2;
+    private int amountOfClicksBush = 5;
 
+    [SerializeField]
+    private int amountOfClicksBob = 7;
 
     void Start()
     {
         bushesOffPosition = bushes.transform.localPosition;
         catwalkOffPosition = catwalk.transform.localPosition;
-        catwalk = null;
+        bobOffPosition = bob.transform.localPosition;
+        //catwalk = null;
     }
 
     public void Switch()
@@ -34,41 +39,46 @@ public class EnviSwitch : MonoBehaviour
         {
             StopCoroutine(ascent);
         }
-        //if (descent != null)
-        //{
-        //    StopCoroutine(descent);
-        //}
-
-        if (clicked == amountOfClicksBush)
+        if (descent != null)
         {
-            bushes.SetActive(true);
-            ascent = StartCoroutine(AnimateAscent(bushesOffPosition, bushesOnPosition));
-            //descent = StartCoroutine(AnimateDescent(catwalkOffPosition, catwalkOnPosition));
+            StopCoroutine(descent);
+        }
+
+        if(clicked == amountOfClicksBush) {
+            //bushes.SetActive(true);
+            ascent = StartCoroutine(AnimateAscent(bushesOffPosition, bushesOnPosition, bushes));
+            descent = StartCoroutine(AnimateDescent(catwalkOffPosition, catwalkOnPosition, catwalk));
+        } else if(clicked == amountOfClicksBob) {
+            //bob.SetActive(true);
+            ascent = StartCoroutine(AnimateAscent(bobOffPosition, bobOnPosition, bob));
+            descent = StartCoroutine(AnimateDescent(bushesOnPosition, bushesOffPosition, bushes));
+            //bushes.SetActive(false);
         }
 
         clicked++;
     }
 
-    private IEnumerator AnimateAscent(Vector3 bushFromPosition, Vector3 bushToPosition)
+    private IEnumerator AnimateAscent(Vector3 objectFromPosition, Vector3 objectToPosition, GameObject objectje)
     {
+        objectje.SetActive(true);
         float t = 0;
         while (t < duration)
         {
-            bushes.transform.position = Vector3.Lerp(bushFromPosition, bushToPosition, t / duration);
+            bushes.transform.position = Vector3.Lerp(objectFromPosition, objectToPosition, t / duration);
             t += Time.deltaTime;
             yield return null;
         }
     }
 
-    //private IEnumerator AnimateDescent(Vector3 catwalkFromPos, Vector3 catwalkToPos)
-    //{
-    //    float t = 0;
-    //    while (t < duration)
-    //    {
-    //        catwalk.transform.position = Vector3.Lerp(catwalkFromPos, catwalkToPos, t / duration);
-    //        t += Time.deltaTime;
-    //        yield return null;
-    //    }
-    //    catwalk.SetActive(false);
-    //}
+    private IEnumerator AnimateDescent(Vector3 objectFromPos, Vector3 objectToPos, GameObject objectje)
+    {
+        float t = 0;
+        while (t < duration)
+        {
+            objectje.transform.position = Vector3.Lerp(objectFromPos, objectToPos, t / duration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        objectje.SetActive(false);
+    }
 }
