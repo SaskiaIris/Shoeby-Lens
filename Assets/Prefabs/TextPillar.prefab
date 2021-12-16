@@ -412,11 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2598541557200430588}
   m_Layer: 0
-<<<<<<< HEAD:Assets/Prefabs/ButtonPillar Confirm.prefab
-  m_Name: ButtonPillar Confirm
-=======
   m_Name: TextPillar
->>>>>>> Feature/Onboarding:Assets/Prefabs/TextPillar.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

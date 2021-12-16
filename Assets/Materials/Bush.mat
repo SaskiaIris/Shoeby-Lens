@@ -7,11 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Materials/UI/Pijl.mat
-  m_Name: Pijl
-=======
-  m_Name: albedo
->>>>>>> Development:Assets/Materials/Environment/Materials/albedo.mat
+  m_Name: Bush
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -44,11 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<< HEAD:Assets/Materials/UI/Pijl.mat
-        m_Texture: {fileID: 2800000, guid: 742fb90496237114e9da6bed8397fb98, type: 3}
-=======
-        m_Texture: {fileID: 2800000, guid: a7e1025239c51cb4fa72a84fe1597b78, type: 3}
->>>>>>> Development:Assets/Materials/Environment/Materials/albedo.mat
+        m_Texture: {fileID: 2800000, guid: 16a494e1e0894514bbc2e9163f434a89, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -65,11 +57,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 0
+    - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0
-    - _Glossiness: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
