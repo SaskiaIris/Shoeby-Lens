@@ -7,13 +7,10 @@ public class TransformBody : MonoBehaviour {
 
     [SerializeField]
     private float timeForScaling = 1f;
-
     [SerializeField]
     private int scaleStep = 10;
-
     [SerializeField]
     private int middleSize = 0;
-
     [SerializeField]
     private float maxSize = 100f;
 
@@ -22,18 +19,13 @@ public class TransformBody : MonoBehaviour {
 
     private SkinnedMeshRenderer skinnedMeshRenderer;
 
-    //int clicked = 0;
-
     // Start is called before the first frame update
     void Start() {
         skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     public void ScaleStart(bool isThisButtonRight) {
-        //clicked++;
-        //Debug.Log("blend shape click amount: " + clicked);
         if(!isBusy) {
-            //Debug.Log("GO, not busy");
             foreach(Blendshape shape in blendshapes) {
                 if(shape.isSelected) {
                     StartCoroutine(ScaleBody(shape, isThisButtonRight, timeForScaling));
@@ -63,22 +55,18 @@ public class TransformBody : MonoBehaviour {
         if(shape.isMin) {
             blendshapeIndex = shape.minIndex;
 
-            if(!buttonRight /*&& currentSize != maxSize*/) {
+            if(!buttonRight) {
                 sizeToBe = currentSize + scaleStep;
-                Debug.Log("state 1");
             } else {
                 sizeToBe = currentSize - scaleStep;
-                Debug.Log("state 2");
             }
         } else {
             blendshapeIndex = shape.maxIndex;
 
-            if(buttonRight /*&& currentSize != maxSize*/) {
+            if(buttonRight) {
                 sizeToBe = currentSize + scaleStep;
-                Debug.Log("state 3");
             } else {
                 sizeToBe = currentSize - scaleStep;
-                Debug.Log("state 4");
             }
         }
 
