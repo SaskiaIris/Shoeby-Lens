@@ -6,7 +6,7 @@ public class TransformBody : MonoBehaviour {
     bool isBusy = false;
 
     [SerializeField]
-    private float timeForScaling = 20f;
+    private float timeForScaling = 1f;
 
     [SerializeField]
     private int scaleStep = 10;
@@ -22,7 +22,7 @@ public class TransformBody : MonoBehaviour {
 
     private SkinnedMeshRenderer skinnedMeshRenderer;
 
-    int clicked = 0;
+    //int clicked = 0;
 
     // Start is called before the first frame update
     void Start() {
@@ -30,14 +30,13 @@ public class TransformBody : MonoBehaviour {
     }
 
     public void ScaleStart(bool isThisButtonRight) {
-        clicked++;
-        Debug.Log("blend shape click amount: " + clicked);
+        //clicked++;
+        //Debug.Log("blend shape click amount: " + clicked);
         if(!isBusy) {
-            Debug.Log("GO, not busy");
+            //Debug.Log("GO, not busy");
             foreach(Blendshape shape in blendshapes) {
                 if(shape.isSelected) {
                     StartCoroutine(ScaleBody(shape, isThisButtonRight, timeForScaling));
-                    //break;
                 }
             }
         }
@@ -51,10 +50,14 @@ public class TransformBody : MonoBehaviour {
         float sizeToBe = 0;
 
         if(currentSize == middleSize) {
-            shape.flipMinMax();
+            if((buttonRight && shape.isMin) || (!buttonRight && !shape.isMin)) {
+                shape.flipMinMax();
+            }
         } else if(currentSize == maxSize) {
-            yield return null;
-            //HIER STOP DING MAKEN
+            if((!buttonRight && shape.isMin) || (buttonRight && !shape.isMin)) {
+                isBusy = false;
+                yield break;
+            }
         }
 
         if(shape.isMin) {
