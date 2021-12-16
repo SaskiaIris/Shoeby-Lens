@@ -242,7 +242,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2598541557200430588, guid: f25786a16a89d754385590f84ae68700, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2598541557200430588, guid: f25786a16a89d754385590f84ae68700, type: 3}
       propertyPath: m_LocalPosition.x
@@ -288,6 +288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonPillar Confirm
       objectReference: {fileID: 0}
+    - target: {fileID: 9183838452518603976, guid: f25786a16a89d754385590f84ae68700, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 691550fec4fec704ea96bb26ee86d86a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f25786a16a89d754385590f84ae68700, type: 3}
 --- !u!1 &216021406
@@ -470,7 +474,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2598541557200430588, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2598541557200430588, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -580,6 +584,26 @@ PrefabInstance:
       propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6909671488544392232, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
+      propertyPath: m_Color.b
+      value: 0.92067146
+      objectReference: {fileID: 0}
+    - target: {fileID: 6909671488544392232, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6909671488544392232, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6909671488544392232, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6909671488544392232, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7155578694832820309, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
       propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -636,6 +660,10 @@ PrefabInstance:
       propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 9183838452518603976, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 691550fec4fec704ea96bb26ee86d86a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 740192064702a434c9b4b0f3c9c6dfdf, type: 3}
 --- !u!1001 &968740879
@@ -791,7 +819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4500151146971433189, guid: 0d4da99231f388943a13c083d5334269, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4500151146971433189, guid: 0d4da99231f388943a13c083d5334269, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1013,7 +1041,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1625334613
 PrefabInstance:
@@ -1620,6 +1648,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 366134868}
     m_Modifications:
+    - target: {fileID: 2843924348437204234, guid: 2eb1300c578b4f545850cbe1fc5c31d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 980433187e576bd43aa586b283cda49a, type: 2}
     - target: {fileID: 7197013656484302699, guid: 2eb1300c578b4f545850cbe1fc5c31d5, type: 3}
       propertyPath: m_Name
       value: Runway
