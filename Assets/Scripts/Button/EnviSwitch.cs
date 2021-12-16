@@ -48,13 +48,12 @@ public class EnviSwitch : MonoBehaviour
         {
             //bushes.SetActive(true);
             ascent = StartCoroutine(AnimateAscent(bushesOffPosition, bushesOnPosition, bushes));
-            descent = StartCoroutine(AnimateDescent(catwalkOffPosition, catwalkOnPosition, catwalk));
         }
         else if (clicked == amountOfClicksBob)
         {
             //bob.SetActive(true);
             ascent = StartCoroutine(AnimateAscent(bobOffPosition, bobOnPosition, bob));
-            descent = StartCoroutine(AnimateDescent(bushesOnPosition, bushesOffPosition, bushes));
+            descent = StartCoroutine(AnimateDescent(catwalkOffPosition, catwalkOnPosition, catwalk));
             //bushes.SetActive(false);
         }
 
@@ -67,7 +66,7 @@ public class EnviSwitch : MonoBehaviour
         float t = 0;
         while (t < duration)
         {
-            bushes.transform.position = Vector3.Lerp(objectFromPosition, objectToPosition, t / duration);
+            objectje.transform.position = Vector3.Lerp(objectFromPosition, objectToPosition, t / duration);
             t += Time.deltaTime;
             yield return null;
         }
