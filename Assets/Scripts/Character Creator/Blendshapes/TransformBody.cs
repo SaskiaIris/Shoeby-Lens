@@ -43,50 +43,47 @@ public class TransformBody : MonoBehaviour {
         }
     }
 
-    public void SaveShapes() {
-
-    }
-
     IEnumerator ScaleBody(Blendshape shape, bool buttonRight, float scaleScaleStep) {
         isBusy = true;
 
         int blendshapeIndex = 0;
-        float currentSize;
+        float currentSize = shape.currentBlendValue;
         float sizeToBe = 0;
 
-        if(shape.isMin) {
-            currentSize = skinnedMeshRenderer.GetBlendShapeWeight(shape.minIndex);
+        if(currentSize == middleSize) {
+            shape.flipMinMax();
+        } else if(currentSize == maxSize) {
+            yield return null;
+            //HIER STOP DING MAKEN
+        }
 
-            if(!buttonRight && currentSize != maxSize) {
-                blendshapeIndex = shape.minIndex;
+        if(shape.isMin) {
+            blendshapeIndex = shape.minIndex;
+
+            if(!buttonRight /*&& currentSize != maxSize*/) {
                 sizeToBe = currentSize + scaleStep;
-            } else if(buttonRight && currentSize != middleSize) {
-                blendshapeIndex = shape.minIndex;
+                Debug.Log("state 1");
+            } else {
                 sizeToBe = currentSize - scaleStep;
-            } else if(buttonRight && currentSize == middleSize) {
-                shape.flipMinMax();
-                blendshapeIndex = shape.maxIndex;
-                sizeToBe = currentSize + scaleStep;
+                Debug.Log("state 2");
             }
         } else {
-            currentSize = skinnedMeshRenderer.GetBlendShapeWeight(shape.maxIndex);
+            blendshapeIndex = shape.maxIndex;
 
-            if(buttonRight && currentSize != maxSize) {
-                blendshapeIndex = shape.maxIndex;
+            if(buttonRight /*&& currentSize != maxSize*/) {
                 sizeToBe = currentSize + scaleStep;
-            } else if(!buttonRight && currentSize != middleSize) {
-                blendshapeIndex = shape.maxIndex;
+                Debug.Log("state 3");
+            } else {
                 sizeToBe = currentSize - scaleStep;
-            } else if(!buttonRight && currentSize == middleSize) {
-                shape.flipMinMax();
-                blendshapeIndex = shape.minIndex;
-                sizeToBe = currentSize - scaleStep;
+                Debug.Log("state 4");
             }
         }
 
         Debug.Log("to be: " + sizeToBe);
 
         skinnedMeshRenderer.SetBlendShapeWeight(blendshapeIndex, Mathf.Lerp(currentSize, sizeToBe, scaleScaleStep));
+
+        shape.currentBlendValue = skinnedMeshRenderer.GetBlendShapeWeight(blendshapeIndex);
 
         isBusy = false;
 
